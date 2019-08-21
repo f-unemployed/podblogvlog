@@ -1,7 +1,7 @@
 'use strict'
 
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {User, Content} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -11,8 +11,31 @@ async function seed() {
     User.create({email: 'cody@email.com', password: '123'}),
     User.create({email: 'murphy@email.com', password: '123'})
   ])
+  const content = await Promise.all([
+    Content.create({
+      category: 'audio',
+      name: 'episode one',
+      description: `A 76 year-old woman wonders if everyone is doing polyamory these days, or if there are any monogamous couples left. A woman's twin brother has become a white supremacist, and is getting sucked in to a very scary community. Dan brings on Christian Picciolini, who himself was recruited and eventually left the white power movement. He now combats extreme hate groups, with a message compassion and understanding.On the Magnum, Dan chats with writer Zachary Zane, on the challenges and resources for coming out as a bi man. And, a woman works form home in her group house. One of her housemates has wall quaking, floor rumbling, howling, caterwauling, noisy sex at all hours, sometimes while the caller is on a work call. When confronted the housemate says she wont stop. Is it time to move out, or just live with it`,
+      URL:
+        'http://hwcdn.libsyn.com/p/4/7/c/47c919024c4d02ca/savagelove-082019.mp3?c_id=49746071&cs_id=49746071&expiration=1566417261&hwt=ed09203e61007c8fe0f6d0bc1650aff4'
+    }),
+    Content.create({
+      category: 'image',
+      name: 'javascript underwater',
+      description: 'this is a meme/image test',
+      URL:
+        'https://i.pinimg.com/736x/64/e8/48/64e84853aaa2a974fc88b1a4c614a7f2.jpg'
+    }),
+    Content.create({
+      category: 'video',
+      name: 'make up video',
+      description: 'make up tutorial description',
+      URL: 'https://www.youtube.com/watch?v=xYzYtPl0eIg'
+    })
+  ])
 
   console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${content.length} content blocks`)
   console.log(`seeded successfully`)
 }
 
