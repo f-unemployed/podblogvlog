@@ -17,6 +17,10 @@ const Content = db.define('content', {
   URL: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+  image: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 })
 module.exports = Content
