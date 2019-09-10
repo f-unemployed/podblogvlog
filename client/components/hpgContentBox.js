@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {makeStyles} from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
@@ -39,9 +40,11 @@ export default function ContentBlock(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button href={content.URL} size="small" color="primary">
-          Learn More
-        </Button>
+        <Link to={`/content/${content.id}`}>
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   )
