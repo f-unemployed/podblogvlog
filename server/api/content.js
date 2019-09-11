@@ -43,3 +43,12 @@ router.get('/random', async (req, res, next) => {
     next(err)
   }
 })
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const singleContent = await Content.findByPk(req.params.id)
+    singleContent ? res.json(singleContent) : next()
+  } catch (error) {
+    next(error)
+  }
+})
