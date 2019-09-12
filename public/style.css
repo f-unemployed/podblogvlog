@@ -1,5 +1,18 @@
 body {
-  font-family: sans-serif;
+  margin-top: 20vh;
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-template-columns: [first] 15% [col-start] auto [col-end] 15% [last];
+}
+
+#app {
+  grid-column: 2 / span 1;
+}
+
+#logo {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 4.3rem;
+  margin-bottom: 15vh;
 }
 
 a {
@@ -19,3 +32,22 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+/*hpg page*/
+#hpgBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hpgContent {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1vw;
+}
+
+.hpgContentElem {
+  grid-column: span 1;
+}
+
+/*about page*/

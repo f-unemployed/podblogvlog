@@ -12,11 +12,18 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="hpgBody">
+        <h1 id="logo">f(unemployed)</h1>
         <HPGModal />
-        <div>
+        <div id="hpgContent">
           {this.props.allContent.map(elem => {
-            return <ContentBlock key={elem.id} content={elem} />
+            return (
+              <ContentBlock
+                class="hpgContentElem"
+                key={elem.id}
+                content={elem}
+              />
+            )
           })}
         </div>
       </div>
