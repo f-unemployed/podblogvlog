@@ -12,7 +12,8 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 250
+    maxWidth: 250,
+    marginLeft: '2vw'
   },
   media: {
     height: 245,
@@ -44,44 +45,49 @@ export default function AboutPage() {
   return (
     <div>
       <HpgModal page="about" />
-
-      <h1>ABOUT US</h1>
-      <p>
-        Two women navigate unemployment in the tech world, will they survive
-        with only a resume and the internet to guide them? Or will they be
-        destroyed by ravenous algorithm challenges that threaten to eat them
-        alive? Tune in as they interview champions of the job hunt and employed
-        software engineers with unconventional backgrounds willing to impart
-        wisdom, advice, and tricks of the trade.
-      </p>
-      <div>
-        {authorArr.map((elem, indx) => (
-          <Card className={classes.card} key={indx}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={elem.imgUrl}
-                title={elem.name}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {elem.name}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {elem.subtitle}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                LinkedIn
-              </Button>
-              <Button size="small" color="primary">
-                GitHub
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
+      <div id="abtContent">
+        <h1>ABOUT f(unemployed)</h1>
+        <p>
+          Two women navigate unemployment in the tech world, will they survive
+          with only a resume and the internet to guide them? Or will they be
+          destroyed by ravenous algorithm challenges that threaten to eat them
+          alive? Tune in as they interview champions of the job hunt and
+          employed software engineers with unconventional backgrounds willing to
+          impart wisdom, advice, and tricks of the trade.
+        </p>
+        <div id="abtAuthors">
+          {authorArr.map((elem, indx) => (
+            <Card className={classes.card} key={indx}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={elem.imgUrl}
+                  title={elem.name}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {elem.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {elem.subtitle}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  LinkedIn
+                </Button>
+                <Button size="small" color="primary">
+                  GitHub
+                </Button>
+              </CardActions>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   )

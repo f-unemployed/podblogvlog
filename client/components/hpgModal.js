@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 import Button from '@material-ui/core/Button'
 import {makeStyles} from '@material-ui/core/styles'
+import zIndex from '@material-ui/core/styles/zIndex'
 
 //functions for the snackbars
 const action = (type, link) => (
@@ -25,7 +26,9 @@ const useStyles = makeStyles(theme => ({
   },
   snackbar: {
     margin: theme.spacing(1),
-    width: '7vw'
+    width: '7vw',
+    backgroundColor: '#E6E6E6',
+    color: '#62A2BC'
   },
   paper: {
     position: 'absolute',

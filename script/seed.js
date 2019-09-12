@@ -15,7 +15,7 @@ async function seed() {
     Content.create({
       category: 'audio',
       name: 'episode one',
-      description: `A 76 year-old woman wonders if everyone is doing polyamory these days, or if there are any monogamous couples left. A woman's twin brother has become a white supremacist, and is getting sucked in to a very scary community. Dan brings on Christian Picciolini, who himself was recruited and eventually left the white power movement. He now combats extreme hate groups, with a message compassion and understanding.On the Magnum, Dan chats with writer Zachary Zane, on the challenges and resources for coming out as a bi man. And, a woman works form home in her group house. One of her housemates has wall quaking, floor rumbling, howling, caterwauling, noisy sex at all hours, sometimes while the caller is on a work call. When confronted the housemate says she wont stop. Is it time to move out, or just live with it`,
+      description: `A 76 year-old woman wonders if everyone is doing polyamory these days, or if there are any monogamous couples left.`,
       URL:
         'http://hwcdn.libsyn.com/p/4/7/c/47c919024c4d02ca/savagelove-082019.mp3?c_id=49746071&cs_id=49746071&expiration=1566417261&hwt=ed09203e61007c8fe0f6d0bc1650aff4',
       image:

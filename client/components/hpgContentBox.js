@@ -8,13 +8,20 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import zIndex from '@material-ui/core/styles/zIndex'
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345
+    maxWidth: 345,
+    zIndex: -1
   },
   media: {
     height: 140
+  },
+  cardBtn: {
+    size: 'small',
+    backgroundColor: '#E9FF70',
+    color: '#3E3E3E'
   }
 })
 
@@ -41,8 +48,8 @@ export default function ContentBlock(props) {
       </CardActionArea>
       <CardActions>
         <Link to={`/content/${content.id}`}>
-          <Button size="small" color="primary">
-            Learn More
+          <Button size="small" className={classes.cardBtn}>
+            Listen Now
           </Button>
         </Link>
       </CardActions>
