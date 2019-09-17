@@ -8,12 +8,11 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import zIndex from '@material-ui/core/styles/zIndex'
 
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
-    zIndex: -1
+    zIndex: 1
   },
   media: {
     height: 140
