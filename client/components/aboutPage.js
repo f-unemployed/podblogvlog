@@ -56,6 +56,16 @@ export default function AboutPage() {
           impart wisdom, advice, and tricks of the trade.
         </p>
         <div id="abtAuthors">
+          <div>
+            <h3>Asia</h3>
+            <p>blah blha lkasjdlasjdlasjdasd</p>
+          </div>
+          <div>
+            <h3>Amaris</h3>
+            <p>blah blha lkasjdlasjdlasjdasd</p>
+          </div>
+        </div>
+        <div id="abtAuthImg">
           {authorArr.map((elem, indx) => (
             <Card className={classes.card} key={indx}>
               <CardActionArea>
