@@ -54,7 +54,9 @@ export default function AboutPage() {
     <div>
       <HpgModal page="about" />
       <div id="abtContent">
-        <h1>ABOUT f(unemployed)</h1>
+        <h1>
+          ABOUT <div className="logoFont">f(unemployed)</div>
+        </h1>
         <p>
           Two women navigate unemployment in the tech world, will they survive
           with only a resume and the internet to guide them? Or will they be
