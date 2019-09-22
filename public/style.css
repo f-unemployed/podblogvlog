@@ -60,12 +60,6 @@ form div {
   align-items: center;
 }
 
-#abtAuthors {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 2vw;
-}
-
 #abtAuthImg {
   display: flex;
 }

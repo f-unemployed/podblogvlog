@@ -70,8 +70,8 @@ export default function HpgModal(props) {
 
         <SnackbarContent
           className={classes.snackbar}
-          message="Ask Us"
-          action={buttonClick('Ask a Question', modalFlag)}
+          message="Connect"
+          action={action('Ask a Question', '/contact')}
         />
       </div>
     )
@@ -86,8 +86,8 @@ export default function HpgModal(props) {
 
         <SnackbarContent
           className={classes.snackbar}
-          message="Ask Us"
-          action={buttonClick('Ask a Question', modalFlag)}
+          message="Connect"
+          action={action('Ask a Question', '/contact')}
         />
       </div>
     )
