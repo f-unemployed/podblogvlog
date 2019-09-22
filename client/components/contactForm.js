@@ -1,10 +1,12 @@
 import React from 'react'
+import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 
-export default class ContactForm extends React.Component {
+class SignUp extends React.Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.resetForm = this.resetForm.bind(this)
   }
 
   handleSubmit(e) {
@@ -22,46 +24,62 @@ export default class ContactForm extends React.Component {
       }
     }).then(response => {
       if (response.data.msg === 'success') {
-        alert('Thanks for the note!')
+        alert('Thank you for the note!')
         this.resetForm()
       } else if (response.data.msg === 'fail') {
         alert('Message failed to send.')
       }
     })
   }
-
   resetForm() {
     document.getElementById('contact-form').reset()
   }
 
   render() {
     return (
-      <form
-        id="contact-form"
-        onSubmit={this.handleSubmit.bind(this)}
-        method="POST"
-      >
-        <div className="form-group">
-          <label>Name</label>
-          <input type="text" className="form-control" id="name" />
+      <div id="signup-container">
+        <div id="signup">
+          <p>
+            Have a question for our next guest? Know someone with an
+            unconventional story? Just want to say hi?
+          </p>
+          <form
+            id="contact-form"
+            onSubmit={this.handleSubmit.bind(this)}
+            method="POST"
+          >
+            <div className="form-group">
+              <TextField
+                margin="dense"
+                id="name"
+                label="Name"
+                type="text"
+                fullWidth
+                required
+              />
+            </div>
+            <div className="form-group">
+              <TextField
+                margin="dense"
+                id="email"
+                label="Email Address"
+                type="email"
+                fullWidth
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Message</label>
+              <textarea className="form-control" rows="5" id="message" />
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div className="form-group">
-          <label>Message</label>
-          <textarea className="form-control" rows="5" id="message" />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+      </div>
     )
   }
 }
+
+export default SignUp
