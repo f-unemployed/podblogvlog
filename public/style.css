@@ -12,9 +12,14 @@ body {
 }
 
 #logo {
-  font-family: 'Reenie Beanie', cursive;
+  font-family: 'Liu Jian Mao Cao', cursive;
   font-size: 4.3rem;
   margin-bottom: 15vh;
+  color: #fe9770;
+}
+
+.logoFont {
+  font-family: 'Liu Jian Mao Cao', cursive;
   color: #fe9770;
 }
 
