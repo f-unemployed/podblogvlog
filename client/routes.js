@@ -9,7 +9,8 @@ import {
   Homepage,
   About,
   singleListenView,
-  ContactForm
+  ContactForm,
+  addPage
 } from './components'
 import {me} from './store'
 
@@ -28,6 +29,7 @@ class Routes extends Component {
         <Route exact path="/about" component={About} />
         <Route exact path="/content/:id" component={singleListenView} />
         <Route exact path="/contact" component={ContactForm} />
+        <Route exact path="/content/podblogvlog04" component={addPage} />
       </Switch>
     )
   }
