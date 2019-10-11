@@ -16,7 +16,6 @@ class SingleListenView extends React.Component {
       <div>
         <div>{name}</div>
         <div>{description}</div>
-        <div>{URL}</div>
         <img src={image} height="42" width="42" />
 
         <audio ref="audio_tag" src={URL} controls />

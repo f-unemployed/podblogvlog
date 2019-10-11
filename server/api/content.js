@@ -2,6 +2,15 @@ const router = require('express').Router()
 const {Content} = require('../db/models')
 module.exports = router
 
+router.post('/podblogvlog04', async (req, res, next) => {
+  try {
+    const newContent = await Content.create(req.body)
+    res.json(newContent)
+  } catch (error) {
+    console.log(error)
+  }
+})
+
 router.get('/', async (req, res, next) => {
   try {
     const allContent = await Content.findAll()
