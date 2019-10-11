@@ -47,6 +47,7 @@ export const getSingleContentThunk = id => async dispatch => {
 
 export const addContentThunk = info => async dispatch => {
   try {
+    console.log('in the thunk')
     const res = await axios.post('/api/content/podblogvlog04', {
       category: info.category,
       name: info.name,

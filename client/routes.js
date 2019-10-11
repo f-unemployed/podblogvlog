@@ -10,7 +10,7 @@ import {
   About,
   singleListenView,
   ContactForm,
-  addPage
+  AddPage
 } from './components'
 import {me} from './store'
 
@@ -27,9 +27,9 @@ class Routes extends Component {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/content/podblogvlog04" component={AddPage} />
         <Route exact path="/content/:id" component={singleListenView} />
         <Route exact path="/contact" component={ContactForm} />
-        <Route exact path="/content/podblogvlog04" component={addPage} />
       </Switch>
     )
   }
